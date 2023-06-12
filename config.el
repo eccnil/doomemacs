@@ -76,5 +76,9 @@
 ;; they are implemented.
 
 (setq
- projectile-project-search-path '("~/Developer/")
-)
+ projectile-project-search-path '("~/Developer/"))
+
+(setq
+ treemacs-width 30
+ treemacs--width-is-locked nil
+ treemacs-width-is-initially-locked nil)
