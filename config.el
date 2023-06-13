@@ -83,9 +83,12 @@
  treemacs--width-is-locked nil
  treemacs-width-is-initially-locked nil)
 
+;; kubernetes
 (use-package! kubernetes
   :config
   (setq kubernetes-poll-frequency 3600
         kubernetes-redraw-frequency 3600))
 (use-package! kubernetes-evil
   :after kubernetes)
+(after! kubernetes
+  (map! :n "SPC K" #'kubernetes-overview))
