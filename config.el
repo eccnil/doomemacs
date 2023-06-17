@@ -96,11 +96,11 @@
 ;; platformio-mode
 (use-package! platformio-mode
   :config (
-           ;; ;; Enable ccls for all c++ files, and platformio-mode only
-           ;; ;; when needed (platformio.ini present in project root).
-           ;; (add-hook 'c++-mode-hook (lambda ()
-           ;;                 (lsp-deferred)
-           ;;                 (platformio-conditionally-enable)))
+           ;; Enable ccls for all c++ files, and platformio-mode only
+           ;; when needed (platformio.ini present in project root).
+           (add-hook 'c++-mode-hook (lambda ()
+                           (lsp-deferred)
+                           (platformio-conditionally-enable)))
 )
 (after! projectile
   (projectile-register-project-type 'platformio '("platformio.ini")
