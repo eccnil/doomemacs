@@ -92,3 +92,19 @@
   :after kubernetes)
 (after! kubernetes
   (map! :n "SPC K" #'kubernetes-overview))
+
+;; platformio-mode
+(use-package! platformio-mode
+  :config (
+           ;; ;; Enable ccls for all c++ files, and platformio-mode only
+           ;; ;; when needed (platformio.ini present in project root).
+           ;; (add-hook 'c++-mode-hook (lambda ()
+           ;;                 (lsp-deferred)
+           ;;                 (platformio-conditionally-enable)))
+)
+(after! projectile
+  (projectile-register-project-type 'platformio '("platformio.ini")
+                                  :project-file "platformio.ini"
+                                  :run "pio run"
+                                  :test "pio test"
+                                  :compile "pio run -t build")))
