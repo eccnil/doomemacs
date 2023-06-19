@@ -28,8 +28,8 @@
 
 (package! kubernetes)
 (package! kubernetes-evil)
-
 (package! platformio-mode)
+(package! ace-window)
 
 ;; You can override the recipe of a built in package without having to specify
 ;; all the properties for `:recipe'. These will inherit the rest of its recipe

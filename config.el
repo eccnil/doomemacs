@@ -108,3 +108,6 @@
                                   :run "pio run"
                                   :test "pio test"
                                   :compile "pio run -t build")))
+
+;; ace window
+(global-set-key (kbd "M-o") 'ace-window)
